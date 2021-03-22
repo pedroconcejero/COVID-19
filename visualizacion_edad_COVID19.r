@@ -1,8 +1,8 @@
 # Pedro Concejero pedro.concejerocerezo@gmail.com
-# para UTAD https://www.u-tad.com/
-# 29 de abril de 2020
+# para master UCM 
+# 19 de marzo 2021 (a partir de lo realizado en 2020)
 
-# Script para visualizar muertes por COVID-19 por edad y sexo
+# Script para visualizar muertes por COVID-19 por edad y sexo (datos 2020)
 # Infinitas gracias al grandísimo trabajo de datadista para 
 # coordinar y compartir los datos de esta pandemia
 # https://datadista.com/
@@ -10,7 +10,7 @@
 
 library(tidyverse)
 
-url <- "https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/nacional_covid19_rango_edad.csv"
+url <- "https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/old_series/nacional_covid19_rango_edad.csv"
 
 data <- read_csv(url)
 
@@ -107,8 +107,6 @@ p + geom_bar(position = "dodge",
              stat = "identity") + coord_flip()
 
 def2 <- p + geom_bar(position = "dodge",
-             stat = "identity") + coord_flip()
+                     stat = "identity") + coord_flip()
 
 def2 + ggtitle(paste(title, "\n", "por género"))
-
-               
